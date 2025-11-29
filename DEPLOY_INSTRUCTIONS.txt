@@ -1,0 +1,68 @@
+# STEP-BY-STEP DEPLOYMENT GUIDE FOR JINBE BOT
+
+## METHOD 1: GITHUB + RENDER (RECOMMENDED)
+
+### Step 1: Create GitHub Repository
+1. Go to https://github.com/new
+2. Repository name: jinbe-bot
+3. Make it PRIVATE (to protect your code)
+4. Click "Create repository"
+
+### Step 2: Push Code to GitHub
+Open PowerShell in your project folder and run these commands ONE BY ONE:
+
+cd "e:\Discord Bots\Jinbe"
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/jinbe-bot.git
+git push -u origin main
+
+(Replace YOUR_USERNAME with your actual GitHub username)
+
+### Step 3: Deploy on Render
+1. Go to https://render.com/
+2. Sign up/Login with GitHub
+3. Click "New +" → "Background Worker"
+4. Connect your GitHub repository (jinbe-bot)
+5. Configure:
+   - Name: jinbe-discord-bot
+   - Environment: Python 3
+   - Build Command: pip install -r requirements.txt
+   - Start Command: python jinbe.py
+6. Add Environment Variable:
+   - Key: DISCORD_TOKEN
+   - Value: YOUR_DISCORD_BOT_TOKEN_HERE
+7. Click "Create Background Worker"
+
+Your bot will be online in 2-3 minutes!
+
+## METHOD 2: RAILWAY (ALTERNATIVE)
+
+1. Go to https://railway.app/
+2. Login with GitHub
+3. Click "New Project" → "Deploy from GitHub repo"
+4. Select your jinbe-bot repository
+5. Add Environment Variable:
+   - DISCORD_TOKEN = your_token_here
+6. Railway will auto-detect and deploy
+
+## IMPORTANT NOTES:
+
+- Free tier on Render may have limitations
+- Use paid tier ($7/month) for guaranteed 24/7 uptime
+- Never share your DISCORD_TOKEN publicly
+- The .gitignore file prevents .env from being uploaded to GitHub
+
+## TROUBLESHOOTING:
+
+If bot doesn't start:
+1. Check logs in Render dashboard
+2. Verify DISCORD_TOKEN is correct
+3. Ensure all files are uploaded
+4. Check if requirements.txt is present
+
+## SUPPORT:
+
+If you need help, check the Render/Railway documentation or Discord bot guides.

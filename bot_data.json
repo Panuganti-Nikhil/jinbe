@@ -1,0 +1,53 @@
+{
+  "welcome_messages": {
+    "1427343809771081880": "\ud83d\udc4b Hey {member}! Welcome to our friend group. Make yourself at home!",
+    "1425867493590827140": "\ud83c\udfae Welcome {member} to our gaming community! Check out the rules and introduce yourself!",
+    "1427362144696930388": "\ud83c\udfb5 Welcome {member} to our music server! Share your favorite tracks and enjoy the vibe!",
+    "1426461542022643826": "\ud83c\udfb5 Welcome {member} to our music server! Share your favorite tracks and enjoy the vibe!",
+    "1434901742117453949": "\ud83c\udfac Welcome {member} to our YouTube community! Don't forget to subscribe and introduce yourself!",
+    "1443829297084108904": "\ud83c\udfac Welcome {member} to our YouTube community! Don't forget to subscribe and introduce yourself!"
+  },
+  "auto_mod": {
+    "warnings": {
+      "1427343809771081880": {
+        "1292512566840393900": {
+          "count": 3,
+          "history": [
+            {
+              "timestamp": "2025-10-13T17:51:49.452354+00:00",
+              "message": "Fuckkk",
+              "channel": "\ud83d\udcacgeneral"
+            },
+            {
+              "timestamp": "2025-10-13T17:51:58.163529+00:00",
+              "message": "Fuck",
+              "channel": "\ud83d\udcacgeneral"
+            },
+            {
+              "timestamp": "2025-10-13T17:52:06.402793+00:00",
+              "message": "Fuckkkkkkk",
+              "channel": "\ud83d\udcacgeneral"
+            }
+          ]
+        },
+        "1253141960449982558": {
+          "count": 2,
+          "history": [
+            {
+              "timestamp": "2025-10-13T18:17:48.748566+00:00",
+              "message": "Fuck",
+              "channel": "\ud83d\udcacgeneral"
+            },
+            {
+              "timestamp": "2025-10-13T18:19:09.700763+00:00",
+              "message": "Fuck",
+              "channel": "\ud83d\udcacgeneral"
+            }
+          ]
+        }
+      }
+    },
+    "banned_users": {}
+  },
+  "server_configs": {}
+}

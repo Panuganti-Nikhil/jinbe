@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: jinbe-discord-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python jinbe.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false

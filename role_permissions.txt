@@ -1,0 +1,175 @@
+# Server Role Permissions
+
+## Gaming Community Template
+
+. 👑 Owner
+  - Permissions: administrator
+  - Color: Red (0xff0000)
+
+. ⚡ Head Admin
+  - Permissions: manage_guild, manage_roles
+  - Color: Orange Red (0xff4500)
+
+. 🔧 Admin
+  - Permissions: manage_channels, manage_messages
+  - Color: Orange (0xffa500)
+
+. 🛡️ Moderator
+  - Permissions: manage_messages, kick_members
+  - Color: Green (0x00ff00)
+
+. 🎯 Event Host
+  - Permissions: mute_members, move_members
+  - Color: Medium Purple (0x9370db)
+
+. ⭐ VIP Member
+  - Permissions: priority_speaker
+  - Color: Yellow (0xffff00)
+
+. 🎮 Member
+  - Permissions: read_messages
+  - Color: Sky Blue (0x00bfff)
+
+## Music Community Template
+
+. 👑 Owner
+  - Permissions: administrator
+  - Color: Red (0xff0000)
+
+. 🎼 Curator
+  - Permissions: manage_messages, manage_roles
+  - Color: Green (0x00ff00)
+
+. 🎧 DJ
+  - Permissions: priority_speaker, mute_members
+  - Color: Medium Purple (0x9370db)
+
+. 🎤 Artist
+  - Permissions: attach_files
+  - Color: Hot Pink (0xff69b4)
+
+. 🎵 Listener
+  - Permissions: read_messages
+  - Color: Sky Blue (0x00bfff)
+
+## Friends Hangout Template
+
+. 👑 Owner
+  - Permissions: administrator
+  - Color: Red (0xff0000)
+
+. 😊 Friend
+  - Permissions: read_messages
+  - Color: Sky Blue (0x00bfff)
+
+## Blox Fruits Crew Template
+
+. 👑 Fleet Admiral
+  - Permissions: administrator
+  - Color: Red (0xff0000)
+
+. ⭐ Vice Captain
+  - Permissions: manage_messages, kick_members
+  - Color: Orange (0xffa500)
+
+. 🔧 Officer
+  - Permissions: manage_messages
+  - Color: Green (0x00ff00)
+
+. 🌊 5M Bounty
+  - Permissions: read_messages
+  - Color: Deep Sky Blue (0x00bfff)
+
+. ⚓ 5M Marine
+  - Permissions: read_messages
+  - Color: Deep Sky Blue (0x00bfff)
+
+. 🌊 10M Bounty
+  - Permissions: read_messages
+  - Color: Dodger Blue (0x1e90ff)
+
+. ⚓ 10M Marine
+  - Permissions: read_messages
+  - Color: Dodger Blue (0x1e90ff)
+
+. 🌊 15M Bounty
+  - Permissions: read_messages
+  - Color: Royal Blue (0x4169e1)
+
+. ⚓ 15M Marine
+  - Permissions: read_messages
+  - Color: Royal Blue (0x4169e1)
+
+. 🌊 20M Bounty
+  - Permissions: read_messages
+  - Color: Blue (0x0000ff)
+
+. ⚓ 20M Marine
+  - Permissions: read_messages
+  - Color: Blue (0x0000ff)
+
+. 🌊 30M Bounty
+  - Permissions: read_messages
+  - Color: Blue Violet (0x8a2be2)
+
+. ⚓ 30M Marine
+  - Permissions: read_messages
+  - Color: Blue Violet (0x8a2be2)
+
+. 🎮 Crew Member
+  - Permissions: read_messages
+  - Color: Gray (0x808080)
+
+## YouTube Community Template
+
+. 🎬 Channel Owner
+  - Permissions: administrator
+  - Color: Red (0xff0000)
+
+. 📹 Content Creator
+  - Permissions: manage_messages
+  - Color: Green (0x00ff00)
+
+. ✂️ Editor
+  - Permissions: attach_files
+  - Color: Medium Purple (0x9370db)
+
+. 🛡️ Moderator
+  - Permissions: manage_messages
+  - Color: Sky Blue (0x00bfff)
+
+. 🥉 1K Subscribers
+  - Permissions: read_messages
+  - Color: Bronze (0xcd7f32)
+
+. 🥈 10K Subscribers
+  - Permissions: read_messages
+  - Color: Silver (0xc0c0c0)
+
+. 🥇 25K Subscribers
+  - Permissions: read_messages
+  - Color: Gold (0xffd700)
+
+. 💎 50K Subscribers
+  - Permissions: read_messages
+  - Color: Light Cyan (0xb9f2ff)
+
+. 🏆 100K Subscribers
+  - Permissions: read_messages
+  - Color: Light Red (0xff6b6b)
+
+. 🌟 250K Subscribers
+  - Permissions: read_messages
+  - Color: Purple (0x9b59b6)
+
+. 🚀 500K Subscribers
+  - Permissions: read_messages
+  - Color: Red (0xe74c3c)
+
+. 👑 1M Subscribers
+  - Permissions: read_messages
+  - Color: Gold (0xf1c40f)
+
+. 👍 Subscriber
+  - Permissions: read_messages
+  - Color: Blurple (0x7289da)
