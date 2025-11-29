@@ -1,0 +1,384 @@
+# JINBE DISCORD BOT - FEATURES & CAPABILITIES
+
+## What This Bot Does
+
+Jinbe is a powerful Discord bot designed for server automation, moderation, and management with advanced template systems.
+
+# Core Features
+
+. Server Template System
+  - 5 pre-built server templates (Gaming, Music, Friends, Blox Fruits, YouTube)
+  - Automatic channel and role creation
+  - Category organization
+  - Custom permissions setup
+  - Template application deletes all existing channels and rebuilds from scratch
+
+. Advanced Auto-Moderation
+  - Profanity filter with bypass pattern detection
+  - Leet speak detection
+  - Progressive warning system (3 warnings = 1 hour ban, 5 warnings = kick)
+  - NSFW content detection in non-NSFW channels
+  - Anti-spam system (5 messages in 10 seconds triggers action)
+  - Automatic temporary bans with scheduled unbans
+  - Staff channel logging for all moderation actions
+
+. Channel Management
+  - Lock channels to prevent member messages
+  - Unlock previously locked channels
+  - Permission-based access control
+  - Owner-only command restrictions
+
+. Announcement System
+  - Formatted announcement embeds
+  - @everyone ping capability
+  - Automatic channel creation if not exists
+  - Template-aware channel naming
+
+. Welcome System
+  - Custom welcome messages with member mentions
+  - Automatic role assignment based on template
+  - Welcome embeds with member information
+  - Member count tracking
+  - Account age display
+
+. Quote System
+  - Create beautiful quote embeds from message links
+  - Context menu integration (right-click → Create Quote)
+  - Attachment preview support
+  - Reaction count display
+  - Jump link to original message
+  - Optional reply text
+
+. Rules Management
+  - Auto-generated rules based on server template
+  - Custom rule editing
+  - Rules channel with permissions (owner + bot only)
+  - Template-specific rule sets
+
+. Data Persistence
+  - Stores warning history in bot_data.json
+  - Saves welcome messages per server
+  - Tracks banned users and unban times
+  - Server configuration storage
+  - Automatic data backup
+
+. Blox Fruits Crew Features
+  - Automatic bounty role system (5M, 10M, 15M, 20M, 30M)
+  - Marine role system
+  - Crew name role creation
+  - Fleet Admiral hierarchy
+
+. YouTube Community Features
+  - Subscriber milestone roles (1K to 1M+)
+  - Milestone tracking channels
+  - Content creator role management
+  - Achievement celebrations
+
+# Commands
+
+## Slash Commands (Owner Only)
+
+. /templates - View available server templates with interactive menu
+. /apply <template> - Apply a template (WARNING: Deletes all existing channels)
+. /announce <message> - Make server announcements with embeds
+. /welcome <message> - Set custom welcome message (use {member} for mention)
+. /editrules <rules> - Edit server rules (one per line)
+. /sync - Manually sync commands if not showing
+. /global_sync - Force global command sync (Bot owner only)
+. /help - Show comprehensive help menu
+
+## Prefix Commands (Owner Only)
+
+. !lock <#channel> - Lock a channel to prevent messages (defaults to current channel)
+. !unlock <#channel> - Unlock a locked channel (defaults to current channel)
+
+## Public Commands
+
+. /quote <message_link> [reply_text] - Create quote from message link
+. Right-click message → Apps → Create Quote - Quick quote creation
+
+# Technical Specifications
+
+. Technology Stack
+  - Python 3.11+
+  - discord.py 2.3.0+
+  - python-dotenv 1.0.0+
+  - JSON data storage
+
+. Hosting
+  - Deployed on Render.com
+  - 24/7 uptime
+  - Auto-deploy from GitHub
+  - Environment variable configuration
+
+. Security
+  - Token stored in environment variables
+  - .gitignore protection for sensitive files
+  - Permission-based command access
+  - Owner-only critical commands
+  - No token exposure in code
+
+. Data Storage
+  - bot_data.json for persistent data
+  - Warning history tracking
+  - Banned user management
+  - Welcome message customization
+
+# Permission Requirements
+
+. Bot Permissions Needed
+  - Administrator (for full functionality)
+  - Manage Channels
+  - Manage Roles
+  - Manage Messages
+  - Send Messages
+  - Embed Links
+  - Attach Files
+  - Read Message History
+  - Add Reactions
+  - Kick Members
+  - Ban Members
+  - Manage Webhooks
+
+. User Permission Requirements
+  - Server Owner: All commands
+  - Administrators: No access (owner-only bot)
+  - Members: Quote commands only
+
+# Auto-Moderation Details
+
+. Detected Content
+  - Racial slurs and variations
+  - Homophobic slurs
+  - Sexual content and innuendo
+  - Spam patterns
+  - Bypass attempts (l33t speak, spacing, symbols)
+
+. Penalty System
+  - Warning 1-2: Message deleted + DM notice
+  - Warning 3: 1-hour temporary ban
+  - Warning 5: Permanent kick from server
+
+. NSFW Detection
+  - Explicit sexual terms
+  - Contextual analysis
+  - Conversation history patterns
+  - Request pattern detection
+
+# Template Details
+
+## Gaming Community Template
+  - 7 roles (Owner to Member)
+  - 6 categories
+  - 19+ channels
+  - Esports structure
+
+## Music Community Template
+  - 5 roles (Owner to Listener)
+  - 5 categories
+  - 16+ channels
+  - Genre-specific channels
+
+## Friends Hangout Template
+  - 2 roles (Owner, Friend)
+  - 5 categories
+  - 14+ channels
+  - Casual structure
+
+## Blox Fruits Crew Template
+  - 14 roles (Fleet Admiral to Crew Member)
+  - Auto bounty/marine roles
+  - 6 categories
+  - 22+ channels
+  - Bounty board
+
+## YouTube Community Template
+  - 13 roles (Channel Owner to Subscriber)
+  - Milestone roles (1K to 1M subs)
+  - 5 categories
+  - 15+ channels
+  - Milestone tracking
+
+# Use Cases
+
+. Server Setup Automation
+  - Quick server deployment with templates
+  - Consistent structure across servers
+  - Professional appearance
+
+. Community Management
+  - Automated moderation
+  - Welcome new members
+  - Server announcements
+  - Rules enforcement
+
+. Gaming Communities
+  - Crew/clan servers
+  - Tournament organization
+  - Role-based access
+
+. Content Creator Servers
+  - YouTube community building
+  - Milestone celebrations
+  - Fan engagement
+
+. Private Friend Servers
+  - Simple structure
+  - Easy management
+  - Casual environment
+
+================================================================================
+
+# DISCORD BOT VERIFICATION REQUIREMENTS
+
+## ✅ Requirements for Bot Verification
+
+To request a verification badge, your bot must meet ALL these requirements:
+
+# 1. Have 75+ Servers Minimum
+
+This is the MOST important requirement.
+
+. If your bot is in 74 or fewer servers → you CANNOT apply
+. The bot must be actively used across 75+ different Discord servers
+. Servers must have real members (not bot-only servers)
+
+# 2. Complete the Developer Identity
+
+Enable 2FA for your Discord account
+
+Fill out in Discord Developer Portal:
+
+. Your name
+. Contact information
+. Social links (optional but recommended)
+. Developer information
+. Privacy Policy URL (recommended)
+. Terms of Service URL (recommended)
+
+# 3. Follow Discord's Terms & Rules
+
+Your bot MUST NOT:
+
+. Be a self-bot (user account acting as bot)
+. Leak user data or violate privacy
+. Grant harmful permissions directly without reason
+. Expose its token publicly
+. Include TOS-breaking commands
+. Violate Discord Community Guidelines
+. Scrape or store user data improperly
+. Enable raid/spam functionality
+
+Your bot MUST:
+
+. Have a clear purpose and description
+. Use permissions appropriately
+. Respect user privacy
+. Follow Discord API rate limits
+. Have proper error handling
+. Not be used for malicious purposes
+
+# 4. Submit the Application
+
+Go to the Discord Developer Portal:
+
+👉 https://discord.com/developers/applications
+
+Steps:
+
+. Select your bot application
+. Click "Bot" tab (left sidebar)
+. Click "Verification" section
+. Click "Apply" button (only shows when you reach 75+ servers)
+
+Discord will ask for:
+
+. What your bot does (detailed description)
+. Why it needs certain permissions
+. Contact methods for users
+. Detailed bot functionality description
+. How users can get support
+. Privacy and data handling information
+
+# After Submitting
+
+. Discord reviews application (typically 1–3 days)
+. You may receive follow-up questions
+. If approved → ✔️ Blue checkmark appears beside your bot name
+. If rejected → Review feedback and reapply after fixing issues
+
+# ❌ You CANNOT Get the Checkmark If
+
+. Your bot has fewer than 75 servers
+. Your bot violates Discord policies
+. Your bot isn't publicly available
+. Your bot token was leaked
+. Your bot is just for private/personal use
+. Your bot doesn't have a clear purpose
+. Your bot requests unnecessary permissions
+. Your developer identity is incomplete
+
+# ⭐ Extra: What About the Checkmark Beside Bot Name?
+
+## Official Verified Badge
+
+. Small blue checkmark ✓
+. Only Discord can grant this
+. Shows next to bot username
+. Cannot be faked or manually added
+. Indicates Discord-verified bot
+
+## Custom Emoji Checkmarks
+
+Some bots show checkmarks in their nickname:
+
+✔️ BotName
+
+This is NOT the official verified checkmark!
+
+. Just a custom emoji or Unicode character
+. Anyone can add to bot nickname
+. Does not indicate verification
+. Not the same as official badge
+
+# 🎯 Verification Summary
+
+To get the official ✔️ Verified Bot checkmark:
+
+1. Reach 75+ servers
+2. Complete developer identity with 2FA enabled
+3. Ensure bot follows all Discord rules and TOS
+4. Submit verification request in Developer Portal
+5. Provide detailed information about bot functionality
+6. Wait for Discord approval (1-3 days typically)
+7. Address any feedback if rejected
+
+# Current Status of Jinbe Bot
+
+. Servers: (Check your Discord Developer Portal for current count)
+. Developer Identity: (Ensure 2FA is enabled and info is complete)
+. Compliance: Bot follows Discord TOS and policies
+. Public Availability: Yes (deployed on Render.com)
+. Token Security: Protected via environment variables
+. Purpose: Clear - Server management and automation
+
+# Next Steps for Verification
+
+1. Promote your bot to reach 75+ servers
+2. Complete developer identity in portal
+3. Ensure 2FA is enabled on your Discord account
+4. Prepare detailed bot description
+5. Create Privacy Policy and Terms of Service (optional but recommended)
+6. Submit verification request when eligible
+7. Monitor application status in Developer Portal
+
+================================================================================
+
+# SUPPORT & DOCUMENTATION
+
+. GitHub Repository: https://github.com/Panuganti-Nikhil/jinbe
+. License: MIT License
+. Hosting: Render.com (24/7 uptime)
+. Development Status: Active
+
+For issues or questions, please open an issue on GitHub.

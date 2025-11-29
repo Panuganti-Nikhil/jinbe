@@ -1592,8 +1592,23 @@ class AdvancedTemplateBot(commands.Bot):
                     else:
                         welcome_message = welcome_system.get_default_welcome("friends")
                 
-                # Format welcome message
-                formatted_message = welcome_message.format(member=member.mention)
+                # Format welcome message with support for multiple placeholder variations
+                formatted_message = welcome_message
+                replacements = {
+                    '{member}': member.mention,
+                    '{user}': member.mention,
+                    '{mention}': member.mention,
+                    '{name}': member.name,
+                    '{username}': member.name,
+                    '{server}': member.guild.name,
+                    '{guild}': member.guild.name,
+                    '{count}': str(len(member.guild.members)),
+                    '{members}': str(len(member.guild.members)),
+                    '{membercount}': str(len(member.guild.members))
+                }
+                
+                for placeholder, value in replacements.items():
+                    formatted_message = formatted_message.replace(placeholder, value)
                 
                 embed = discord.Embed(
                     title=f"🎉 Welcome {member.name}!",
@@ -2396,7 +2411,43 @@ async def set_welcome(interaction: discord.Interaction, message: str):
     
     # Use data_manager instead of welcome_system.welcome_messages
     data_manager.set_welcome_message(interaction.guild.id, message)
-    await interaction.response.send_message(f"✅ Welcome message set!\nPreview: {message.format(member=interaction.user.mention)}", ephemeral=True)
+    
+    # Create a safe preview by formatting with actual values
+    # Support multiple placeholder variations
+    preview = message
+    replacements = {
+        '{member}': interaction.user.mention,
+        '{user}': interaction.user.mention,
+        '{mention}': interaction.user.mention,
+        '{name}': interaction.user.name,
+        '{username}': interaction.user.name,
+        '{server}': interaction.guild.name,
+        '{guild}': interaction.guild.name,
+        '{count}': str(len(interaction.guild.members)),
+        '{members}': str(len(interaction.guild.members)),
+        '{membercount}': str(len(interaction.guild.members))
+    }
+    
+    for placeholder, value in replacements.items():
+        preview = preview.replace(placeholder, value)
+    
+    embed = discord.Embed(
+        title="✅ Welcome Message Set!",
+        description="**Preview:**\n" + preview,
+        color=0x00ff00
+    )
+    embed.add_field(
+        name="📝 Supported Placeholders",
+        value=(
+            "• `{member}`, `{user}`, `{mention}` - Member mention\n"
+            "• `{name}`, `{username}` - Member name\n"
+            "• `{server}`, `{guild}` - Server name\n"
+            "• `{count}`, `{members}`, `{membercount}` - Member count"
+        ),
+        inline=False
+    )
+    
+    await interaction.response.send_message(embed=embed, ephemeral=True)
 
 # === EDIT RULES COMMAND ===
 
