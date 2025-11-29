@@ -7,6 +7,12 @@ __pycache__/
 *$py.class
 *.so
 
+# Backup files (exclude from repo)
+jinbe_backup.py
+py.txt
+*.backup
+*.bak
+
 # IDE
 .vscode/
 .idea/

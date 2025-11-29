@@ -1,0 +1,35 @@
+# Backup files
+jinbe_backup.py
+*.backup
+*.bak
+
+# Documentation and text files
+py.txt
+BOT_FEATURES_AND_VERIFICATION.txt
+DEPLOY_INSTRUCTIONS.txt
+README.md
+role_permissions.txt
+LICENSE
+
+# Test files
+test_announce.py
+test_*.py
+
+# Git files
+.git/
+.gitignore
+
+# Environment examples
+.env.example
+
+# IDE and development
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Logs
+*.log
