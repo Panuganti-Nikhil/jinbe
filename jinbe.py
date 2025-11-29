@@ -1604,7 +1604,10 @@ class AdvancedTemplateBot(commands.Bot):
                     '{guild}': member.guild.name,
                     '{count}': str(len(member.guild.members)),
                     '{members}': str(len(member.guild.members)),
-                    '{membercount}': str(len(member.guild.members))
+                    '{membercount}': str(len(member.guild.members)),
+                    '{avatar}': member.display_avatar.url,
+                    '{useravatar}': member.display_avatar.url,
+                    '{pfp}': member.display_avatar.url
                 }
                 
                 for placeholder, value in replacements.items():
@@ -1618,7 +1621,10 @@ class AdvancedTemplateBot(commands.Bot):
                 embed.add_field(name="Member Count", value=f"#{len(member.guild.members)}", inline=True)
                 # Fix the deprecated datetime.utcnow() warning
                 embed.add_field(name="Account Created", value=f"<t:{int(member.created_at.timestamp())}:R>", inline=True)
+                
+                # Always set thumbnail to member avatar
                 embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
+                
                 embed.set_footer(text=f"ID: {member.id}")
                 
                 await welcome_channel.send(embed=embed)
@@ -2425,7 +2431,10 @@ async def set_welcome(interaction: discord.Interaction, message: str):
         '{guild}': interaction.guild.name,
         '{count}': str(len(interaction.guild.members)),
         '{members}': str(len(interaction.guild.members)),
-        '{membercount}': str(len(interaction.guild.members))
+        '{membercount}': str(len(interaction.guild.members)),
+        '{avatar}': interaction.user.display_avatar.url,
+        '{useravatar}': interaction.user.display_avatar.url,
+        '{pfp}': interaction.user.display_avatar.url
     }
     
     for placeholder, value in replacements.items():
@@ -2436,13 +2445,19 @@ async def set_welcome(interaction: discord.Interaction, message: str):
         description="**Preview:**\n" + preview,
         color=0x00ff00
     )
+    
+    # Show user avatar in preview if placeholder is used
+    if '{avatar}' in message or '{useravatar}' in message or '{pfp}' in message:
+        embed.set_thumbnail(url=interaction.user.display_avatar.url)
+    
     embed.add_field(
         name="📝 Supported Placeholders",
         value=(
             "• `{member}`, `{user}`, `{mention}` - Member mention\n"
             "• `{name}`, `{username}` - Member name\n"
             "• `{server}`, `{guild}` - Server name\n"
-            "• `{count}`, `{members}`, `{membercount}` - Member count"
+            "• `{count}`, `{members}`, `{membercount}` - Member count\n"
+            "• `{avatar}`, `{useravatar}`, `{pfp}` - User avatar (shows as thumbnail)"
         ),
         inline=False
     )
